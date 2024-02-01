@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{486D3737-F3D6-4372-840D-155469A2D3AE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Ultra Media Burner</RootNamespace>
+    <AssemblyName>Ultra Media Burner</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Ultra Media Burner.ico</ApplicationIcon>
+    <StartupObject>BurnMedia.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BurnMedia\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BurnMedia\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BurnMedia\Program.cs" />
+    <Compile Include="BurnMedia\Properties\Resources.cs" />
+    <Compile Include="BurnMedia\Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="BurnMedia\UC\BurnFiles.cs" />
+    <Compile Include="BurnMedia\UC\FormatDisc.cs" />
+    <Compile Include="IMAPI2\Interop\BootOptions.cs" />
+    <Compile Include="IMAPI2\Interop\BootOptionsClass.cs" />
+    <Compile Include="IMAPI2\Interop\BurnData.cs" />
+    <Compile Include="IMAPI2\Interop\BURN_MEDIA_TASK.cs" />
+    <Compile Include="IMAPI2\Interop\DDiscFormat2DataEvents.cs" />
+    <Compile Include="IMAPI2\Interop\DDiscFormat2EraseEvents.cs" />
+    <Compile Include="IMAPI2\Interop\DDiscFormat2RawCDEvents.cs" />
+    <Compile Include="IMAPI2\Interop\DDiscFormat2TrackAtOnceEvents.cs" />
+    <Compile Include="IMAPI2\Interop\DDiscMaster2Events.cs" />
+    <Compile Include="IMAPI2\Interop\DFileSystemImageEvents.cs" />
+    <Compile Include="IMAPI2\Interop\DFileSystemImageImportEvents.cs" />
+    <Compile Include="IMAPI2\Interop\DFileSystemImageImport_Event.cs" />
+    <Compile Include="IMAPI2\Interop\DFileSystemImageImport_EventHandler.cs" />
+    <Compile Include="IMAPI2\Interop\DFileSystemImageImport_EventProvider.cs" />
+    <Compile Include="IMAPI2\Interop\DFileSystemImageImport_SinkHelper.cs" />
+    <Compile Include="IMAPI2\Interop\DFileSystemImage_Event.cs" />
+    <Compile Include="IMAPI2\Interop\DFileSystemImage_EventHandler.cs" />
+    <Compile Include="IMAPI2\Interop\DFileSystemImage_EventProvider.cs" />
+    <Compile Include="IMAPI2\Interop\DFileSystemImage_SinkHelper.cs" />
+    <Compile Include="IMAPI2\Interop\DiscFormat2Data_Event.cs" />
+    <Compile Include="IMAPI2\Interop\DiscFormat2Data_EventHandler.cs" />
+    <Compile Include="IMAPI2\Interop\DiscFormat2Data_EventProvider.cs" />
+    <Compile Include="IMAPI2\Interop\DiscFormat2Data_SinkHelper.cs" />
+    <Compile Include="IMAPI2\Interop\DiscFormat2Erase_Event.cs" />
+    <Compile Include="IMAPI2\Interop\DiscFormat2Erase_EventHandler.cs" />
+    <Compile Include="IMAPI2\Interop\DiscFormat2Erase_EventProvider.cs" />
+    <Compile Include="IMAPI2\Interop\DiscFormat2Erase_SinkHelper.cs" />
+    <Compile Include="IMAPI2\Interop\DiscFormat2RawCD_Event.cs" />
+    <Compile Include="IMAPI2\Interop\DiscFormat2RawCD_EventHandler.cs" />
+    <Compile Include="IMAPI2\Interop\DiscFormat2RawCD_EventProvider.cs" />
+    <Compile Include="IMAPI2\Interop\DiscFormat2RawCD_SinkHelper.cs" />
+    <Compile Include="IMAPI2\Interop\DiscFormat2TrackAtOnce_Event.cs" />
+    <Compile Include="IMAPI2\Interop\DiscFormat2TrackAtOnce_EventHandler.cs" />
+    <Compile Include="IMAPI2\Interop\DiscFormat2TrackAtOnce_EventProvider.cs" />
+    <Compile Include="IMAPI2\Interop\DiscFormat2TrackAtOnce_SinkHelper.cs" />
+    <Compile Include="IMAPI2\Interop\DiscMaster2_Event.cs" />
+    <Compile Include="IMAPI2\Interop\DiscMaster2_EventProvider.cs" />
+    <Compile Include="IMAPI2\Interop\DiscMaster2_NotifyDeviceAddedEventHandler.cs" />
+    <Compile Include="IMAPI2\Interop\DiscMaster2_NotifyDeviceRemovedEventHandler.cs" />
+    <Compile Include="IMAPI2\Interop\DiscMaster2_SinkHelper.cs" />
+    <Compile Include="IMAPI2\Interop\DWriteEngine2Events.cs" />
+    <Compile Include="IMAPI2\Interop\DWriteEngine2_Event.cs" />
+    <Compile Include="IMAPI2\Interop\DWriteEngine2_EventHandler.cs" />
+    <Compile Include="IMAPI2\Interop\DWriteEngine2_EventProvider.cs" />
+    <Compile Include="IMAPI2\Interop\DWriteEngine2_SinkHelper.cs" />
+    <Compile Include="IMAPI2\Interop\EmulationType.cs" />
+    <Compile Include="IMAPI2\Interop\EnumFsiItems.cs" />
+    <Compile Include="IMAPI2\Interop\EnumFsiItemsClass.cs" />
+    <Compile Include="IMAPI2\Interop\EnumProgressItems.cs" />
+    <Compile Include="IMAPI2\Interop\EnumProgressItemsClass.cs" />
+    <Compile Include="IMAPI2\Interop\FileSystemImageResult.cs" />
+    <Compile Include="IMAPI2\Interop\FileSystemImageResultClass.cs" />
+    <Compile Include="IMAPI2\Interop\FsiDirectoryItem.cs" />
+    <Compile Include="IMAPI2\Interop\FsiDirectoryItemClass.cs" />
+    <Compile Include="IMAPI2\Interop\FsiFileItem.cs" />
+    <Compile Include="IMAPI2\Interop\FsiFileItemClass.cs" />
+    <Compile Include="IMAPI2\Interop\FsiFileSystems.cs" />
+    <Compile Include="IMAPI2\Interop\FsiItemType.cs" />
+    <Compile Include="IMAPI2\Interop\FsiNamedStreams.cs" />
+    <Compile Include="IMAPI2\Interop\FsiNamedStreamsClass.cs" />
+    <Compile Include="IMAPI2\Interop\FsiStream.cs" />
+    <Compile Include="IMAPI2\Interop\FsiStreamClass.cs" />
+    <Compile Include="IMAPI2\Interop\IBootOptions.cs" />
+    <Compile Include="IMAPI2\Interop\IBurnVerification.cs" />
+    <Compile Include="IMAPI2\Interop\IDiscFormat2.cs" />
+    <Compile Include="IMAPI2\Interop\IDiscFormat2Data.cs" />
+    <Compile Include="IMAPI2\Interop\IDiscFormat2DataEventArgs.cs" />
+    <Compile Include="IMAPI2\Interop\IDiscFormat2Erase.cs" />
+    <Compile Include="IMAPI2\Interop\IDiscFormat2RawCD.cs" />
+    <Compile Include="IMAPI2\Interop\IDiscFormat2RawCDEventArgs.cs" />
+    <Compile Include="IMAPI2\Interop\IDiscFormat2TrackAtOnce.cs" />
+    <Compile Include="IMAPI2\Interop\IDiscFormat2TrackAtOnceEventArgs.cs" />
+    <Compile Include="IMAPI2\Interop\IDiscMaster2.cs" />
+    <Compile Include="IMAPI2\Interop\IDiscRecorder2.cs" />
+    <Compile Include="IMAPI2\Interop\IDiscRecorder2Ex.cs" />
+    <Compile Include="IMAPI2\Interop\IEnumFsiItems.cs" />
+    <Compile Include="IMAPI2\Interop\IEnumProgressItems.cs" />
+    <Compile Include="IMAPI2\Interop\IFileSystemImage.cs" />
+    <Compile Include="IMAPI2\Interop\IFileSystemImage2.cs" />
+    <Compile Include="IMAPI2\Interop\IFileSystemImage3.cs" />
+    <Compile Include="IMAPI2\Interop\IFileSystemImageResult.cs" />
+    <Compile Include="IMAPI2\Interop\IFsiDirectoryItem.cs" />
+    <Compile Include="IMAPI2\Interop\IFsiDirectoryItem2.cs" />
+    <Compile Include="IMAPI2\Interop\IFsiFileItem.cs" />
+    <Compile Include="IMAPI2\Interop\IFsiFileItem2.cs" />
+    <Compile Include="IMAPI2\Interop\IFsiItem.cs" />
+    <Compile Include="IMAPI2\Interop\IFsiNamedStreams.cs" />
+    <Compile Include="IMAPI2\Interop\IIsoImageManager.cs" />
+    <Compile Include="IMAPI2\Interop\IMAPI_BURN_VERIFICATION_LEVEL.cs" />
+    <Compile Include="IMAPI2\Interop\IMAPI_CD_SECTOR_TYPE.cs" />
+    <Compile Include="IMAPI2\Interop\IMAPI_CD_TRACK_DIGITAL_COPY_SETTING.cs" />
+    <Compile Include="IMAPI2\Interop\IMAPI_FEATURE_PAGE_TYPE.cs" />
+    <Compile Include="IMAPI2\Interop\IMAPI_FORMAT2_DATA_MEDIA_STATE.cs" />
+    <Compile Include="IMAPI2\Interop\IMAPI_FORMAT2_DATA_WRITE_ACTION.cs" />
+    <Compile Include="IMAPI2\Interop\IMAPI_FORMAT2_RAW_CD_DATA_SECTOR_TYPE.cs" />
+    <Compile Include="IMAPI2\Interop\IMAPI_FORMAT2_RAW_CD_WRITE_ACTION.cs" />
+    <Compile Include="IMAPI2\Interop\IMAPI_FORMAT2_TAO_WRITE_ACTION.cs" />
+    <Compile Include="IMAPI2\Interop\IMAPI_MEDIA_PHYSICAL_TYPE.cs" />
+    <Compile Include="IMAPI2\Interop\IMAPI_MEDIA_WRITE_PROTECT_STATE.cs" />
+    <Compile Include="IMAPI2\Interop\IMAPI_MODE_PAGE_REQUEST_TYPE.cs" />
+    <Compile Include="IMAPI2\Interop\IMAPI_MODE_PAGE_TYPE.cs" />
+    <Compile Include="IMAPI2\Interop\IMAPI_PROFILE_TYPE.cs" />
+    <Compile Include="IMAPI2\Interop\IMAPI_READ_TRACK_ADDRESS_TYPE.cs" />
+    <Compile Include="IMAPI2\Interop\IMultisession.cs" />
+    <Compile Include="IMAPI2\Interop\IMultisessionSequential.cs" />
+    <Compile Include="IMAPI2\Interop\IProgressItem.cs" />
+    <Compile Include="IMAPI2\Interop\IProgressItems.cs" />
+    <Compile Include="IMAPI2\Interop\IRawCDImageCreator.cs" />
+    <Compile Include="IMAPI2\Interop\IRawCDImageTrackInfo.cs" />
+    <Compile Include="IMAPI2\Interop\IWriteEngine2.cs" />
+    <Compile Include="IMAPI2\Interop\IWriteEngine2EventArgs.cs" />
+    <Compile Include="IMAPI2\Interop\IWriteSpeedDescriptor.cs" />
+    <Compile Include="IMAPI2\Interop\MsftDiscFormat2Data.cs" />
+    <Compile Include="IMAPI2\Interop\MsftDiscFormat2DataClass.cs" />
+    <Compile Include="IMAPI2\Interop\MsftDiscFormat2Erase.cs" />
+    <Compile Include="IMAPI2\Interop\MsftDiscFormat2EraseClass.cs" />
+    <Compile Include="IMAPI2\Interop\MsftDiscFormat2RawCD.cs" />
+    <Compile Include="IMAPI2\Interop\MsftDiscFormat2RawCDClass.cs" />
+    <Compile Include="IMAPI2\Interop\MsftDiscFormat2TrackAtOnce.cs" />
+    <Compile Include="IMAPI2\Interop\MsftDiscFormat2TrackAtOnceClass.cs" />
+    <Compile Include="IMAPI2\Interop\MsftDiscMaster2.cs" />
+    <Compile Include="IMAPI2\Interop\MsftDiscMaster2Class.cs" />
+    <Compile Include="IMAPI2\Interop\MsftDiscRecorder2.cs" />
+    <Compile Include="IMAPI2\Interop\MsftDiscRecorder2Class.cs" />
+    <Compile Include="IMAPI2\Interop\MsftFileSystemImage.cs" />
+    <Compile Include="IMAPI2\Interop\MsftFileSystemImageClass.cs" />
+    <Compile Include="IMAPI2\Interop\MsftIsoImageManager.cs" />
+    <Compile Include="IMAPI2\Interop\MsftIsoImageManagerClass.cs" />
+    <Compile Include="IMAPI2\Interop\MsftMultisessionSequential.cs" />
+    <Compile Include="IMAPI2\Interop\MsftMultisessionSequentialClass.cs" />
+    <Compile Include="IMAPI2\Interop\MsftRawCDImageCreator.cs" />
+    <Compile Include="IMAPI2\Interop\MsftRawCDImageCreatorClass.cs" />
+    <Compile Include="IMAPI2\Interop\MsftWriteEngine2.cs" />
+    <Compile Include="IMAPI2\Interop\MsftWriteEngine2Class.cs" />
+    <Compile Include="IMAPI2\Interop\MsftWriteSpeedDescriptor.cs" />
+    <Compile Include="IMAPI2\Interop\MsftWriteSpeedDescriptorClass.cs" />
+    <Compile Include="IMAPI2\Interop\PlatformId.cs" />
+    <Compile Include="IMAPI2\Interop\ProgressItem.cs" />
+    <Compile Include="IMAPI2\Interop\ProgressItemClass.cs" />
+    <Compile Include="IMAPI2\Interop\ProgressItems.cs" />
+    <Compile Include="IMAPI2\Interop\ProgressItemsClass.cs" />
+    <Compile Include="IMAPI2\Interop\tagCONNECTDATA.cs" />
+    <Compile Include="IMAPI2\Interop\tagSTATSTG.cs" />
+    <Compile Include="IMAPI2\Interop\_FILETIME.cs" />
+    <Compile Include="IMAPI2\Interop\_LARGE_INTEGER.cs" />
+    <Compile Include="IMAPI2\Interop\_ULARGE_INTEGER.cs" />
+    <Compile Include="IMAPI2\MediaItem\DirectoryItem.cs" />
+    <Compile Include="IMAPI2\MediaItem\FileItem.cs" />
+    <Compile Include="IMAPI2\MediaItem\IMediaItem.cs" />
+    <Compile Include="IMAPI2\MediaItem\SHFILEINFO.cs" />
+    <Compile Include="IMAPI2\MediaItem\Win32.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BurnMedia\MainForm.resources" />
+    <EmbeddedResource Include="BurnMedia\Properties\Resources.resources" />
+    <EmbeddedResource Include="BurnMedia\UC\BurnFiles.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BurnMedia\Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
